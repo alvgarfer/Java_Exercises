@@ -5,6 +5,7 @@ public class NumeroRandom
 {
 	
 		@SuppressWarnings("resource")
+		
 	public static int pedirNumero()
 	{
 		int numero_introducido = 0;
@@ -15,11 +16,20 @@ public class NumeroRandom
 		
 		return numero_introducido;
 	}
+		
+	public static int generarAleatorio ()
+	{
+		int num_aleatorio = 0;
+			
+			num_aleatorio = (int) (Math.random() * 100) + 1;
+				
+		return num_aleatorio;
+	}
 	
 	public static void main(String[] args) 
 	{
 		
-		int numero_aleatorio = (int) (Math.random()*100) + 1;
+		int numero_aleatorio = generarAleatorio ();
 		int numero_usuario = 0;
 		int contador = 0;
 		
@@ -63,6 +73,6 @@ done		3 comparar nº introducido y nº generado
 
 done		4 si es > indicarlo		si es < indicarlo (if else)
 	
-			5 Usar do while 5 veces. */
+done		5 Usar do while 5 veces. */
 		
 
