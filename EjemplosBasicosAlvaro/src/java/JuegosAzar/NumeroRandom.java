@@ -1,4 +1,5 @@
 package java.JuegosAzar;
+
 import java.util.Scanner;
 
 public class NumeroRandom 
@@ -29,38 +30,39 @@ public class NumeroRandom
 	public static void main(String[] args) 
 	{
 		
-		int numero_aleatorio = generarAleatorio ();
+		int numero_random = generarAleatorio ();
+		
 		int numero_usuario = 0;
 		int contador = 0;
-		
-		boolean acertado = false;
 		int intentos = 5;
 		
+		boolean acertado = false;
 		
-		do
-		{
-			System.out.println("Introduzca un número: ");
-			numero_usuario = pedirNumero();
-			
-			if (numero_aleatorio > numero_usuario)
+		
+			do
 			{
-				System.out.println("El número del sistema es mayor");
-			}
-				else if (numero_aleatorio < numero_usuario)
+				System.out.println("Introduzca un número: ");
+				numero_usuario = pedirNumero();
+				
+				if (numero_random > numero_usuario)
 				{
-					System.out.println("El número del sistema es menor");
+					System.out.println("El número del sistema es mayor");
 				}
-					else
+					else if (numero_random < numero_usuario)
 					{
-						System.out.println("Enhorabuena, has acertado el número !!");	
-						acertado = true;
+						System.out.println("El número del sistema es menor");
 					}
-			
+						else
+						{
+							System.out.println("Enhorabuena, has acertado el número !!");	
+							acertado = true;
+						}
+				
 				contador ++;
 				intentos --;
-				
-				System.out.println("Le quedan " + intentos + " intentos");
-				
+					
+					System.out.println("Le quedan " + intentos + " intentos");
+					
 			} while ((contador < 5) && (!acertado));
 	}
 }	
