@@ -1,4 +1,4 @@
-package java.Alvaro;
+package java.Cadenas;
 
 public class Cadena {
 	
