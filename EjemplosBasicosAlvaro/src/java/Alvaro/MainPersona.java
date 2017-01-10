@@ -1,5 +1,6 @@
 package java.Alvaro;
 
+import java.IMC.Persona;
 import java.util.Scanner;
 
 public class MainPersona {

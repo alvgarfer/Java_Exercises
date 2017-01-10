@@ -1,5 +1,6 @@
 package java.Alvaro;
 
+import java.IMC.Persona;
 
 public class Principal2 {
 

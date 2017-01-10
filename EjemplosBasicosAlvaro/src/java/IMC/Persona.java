@@ -1,4 +1,4 @@
-package java.Alvaro;
+package java.IMC;
 
 public class Persona {
 	

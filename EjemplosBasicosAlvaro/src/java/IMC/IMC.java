@@ -1,4 +1,4 @@
-package java.Alvaro;
+package java.IMC;
 
 import java.util.Scanner;
 
