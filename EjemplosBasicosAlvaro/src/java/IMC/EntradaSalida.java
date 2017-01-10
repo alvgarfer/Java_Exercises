@@ -10,12 +10,12 @@ public class EntradaSalida
 	public static double obtenerPeso ()
 	{
 		double peso = 0;
-		Scanner scaner = null;
+		Scanner scanner = null;
 		
 			System.out.println("Introduce tu peso (kg): ");
 			
-			scaner = new Scanner(System.in);
-			peso = scaner.nextDouble();
+			scanner = new Scanner(System.in);
+			peso = scanner.nextDouble();
 
 		return peso;
 	}
@@ -26,13 +26,13 @@ public class EntradaSalida
 	public static double obtenerAltura ()
 	{
 		double altura = 0;
-		Scanner scaner = null;
+		Scanner scanner = null;
 		
 			
 			System.out.println("Introduce tu altura (m): ");
 			
-			scaner = new Scanner(System.in);
-			altura = scaner.nextDouble();
+			scanner = new Scanner(System.in);
+			altura = scanner.nextDouble();
 			
 		return altura;
 	}

@@ -1,6 +1,6 @@
 package java.IMC;
 
-public enum TipoIMC {DESNUTRIDO, BAJOPESO, NORMAL, SOBREPESO, OBESO;
+public enum TipoIMC {DESNUTRIDO, BAJOdePESO, NORMAL, SOBREPESO, OBESO;
 
 	
 	public static TipoIMC traduceIMC (double imc) 
@@ -13,7 +13,7 @@ public enum TipoIMC {DESNUTRIDO, BAJOPESO, NORMAL, SOBREPESO, OBESO;
 			}
 				else if (imc >= 16 && imc < 18.5)
 				{
-					devuelvo = TipoIMC.BAJOPESO;
+					devuelvo = TipoIMC.BAJOdePESO;
 				}
 					else if (imc >= 18.5 && imc < 25)
 					{

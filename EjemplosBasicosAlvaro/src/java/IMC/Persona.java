@@ -1,46 +1,33 @@
 package java.IMC;
 
 public class Persona
-{
-	
-	private int edad;
-	private String nombre;
-	
-	public int getEdad() 
+{	
+	private double peso;
+	private double altura;
+		
+	public Persona(double peso, double altura)
 	{
-		return edad;
+		this.peso = peso;
+		this.altura = altura;
 	}
 	
-	public void setEdad (int edad)
+	public double getPeso()
 	{
-		this.edad = edad;
+		return peso;
 	}
 	
-	public String getNombre()
+	public void setPeso(double peso)
 	{
-		return nombre;
+		this.peso = peso;
 	}
 	
-	public void setNombre (String nombre)
+	public double getAltura()
 	{
-		this.nombre = nombre;
+		return altura;
 	}
 	
-	public Persona(int edad, String nombre)
+	public void setAltura(double altura)
 	{
-		super();
-		this.edad = edad;
-		this.nombre = nombre;
-	}
-	
-	public Persona ()
-	{
-		//crea una persona vacía
-	}
-	
-	public void mostarPersona ()
-	{
-		System.out.println("Nombre = " + this.nombre);
-		System.out.println("Edad = " + this.edad);
+		this.altura = altura;
 	}
 }
