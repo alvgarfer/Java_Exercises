@@ -1,4 +1,4 @@
-package java.Alvaro;
+package java.Strings;
 
 
 public class PruebaString {
