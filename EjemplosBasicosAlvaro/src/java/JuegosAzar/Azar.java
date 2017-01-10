@@ -1,7 +1,7 @@
 package java.JuegosAzar;
 import java.util.Scanner;
 
-public class azar 
+public class Azar 
 {
 	
 	
