@@ -35,10 +35,10 @@ public class FraseCaracteres
 			 frase_leida = frase ();
 			 // A la variable String frase_leida se asigna el metodo frase ()
 			 
-			 String frase_junta = frase_leida.replace(" ","");
+			 String frase_junta = frase_leida.replace (" ","");
 			 // en la nueva variable frase_junta se guarda la frase leida por teclado
 			 // pero remplazando los espacios por no espacios(es decir, quitandolos)
 			 
-			 System.out.println(frase_junta);
+			 System.out.println (frase_junta);
 	}
 }

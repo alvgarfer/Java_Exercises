@@ -2,14 +2,13 @@ package javaa.alvaro;
 
 import java.util.Scanner;
 
-import javaa.imc.Persona;
-
 public class PersonaMayor {
 
 	
 	 public static final int NUMERO_PERSONAS = 3;
 	
-	 public static int pedirEdad ()
+	 	
+	public static int pedirEdad ()
 	{
 		int num_leido = 0;
 		Scanner scanner = null;
@@ -22,6 +21,7 @@ public class PersonaMayor {
 	}
 	
 	
+	 		
 	public static String pedirNombre ()
 	{
 		String nombre = null;
@@ -43,13 +43,16 @@ public static void main(String[] args) {
 		Persona personaMayor = new Persona();
 		Persona p = new Persona();
 
-		for(int i=0; i < NUMERO_PERSONAS; i++ ){
+		for(int i=0; i < NUMERO_PERSONAS; i++ )
+		{
 			System.out.print("Introduzca su nombre: ");
 			nombre = pedirNombre();
+			
 			System.out.print("Introduzca su edad: ");
 			edad = pedirEdad();			
 			
-			if (edad > edadMayor){
+			if (edad > edadMayor)
+			{
 				edadMayor = edad;
 				personaMayor.setNombre(nombre);
 				personaMayor.setEdad(edad);

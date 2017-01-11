@@ -2,8 +2,6 @@ package javaa.alvaro;
 
 import java.util.Scanner;
 
-import javaa.imc.Persona;
-
 public class MainPersona {
 	
 	public static int N_PERSONAS = 5;
