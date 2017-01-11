@@ -38,7 +38,7 @@ public class Ficheros
 public static void main(String[] args)
 {
 	//String carpeta_raiz = "C:/Users/Alvaro/EjemplosBasicosAlvaro/EjemplosBasicosAlvaro";
-	File carpeta = new File (".");
+	File carpeta = new File ("C:/Program Files");
 	
 	File [] ficheros = carpeta.listFiles();
 			
@@ -51,7 +51,7 @@ public static void main(String[] args)
 				for (int i = 0; i < ficheros.length; i ++)
 				{
 					if ( ficheros [i].isHidden() )
-						System.out.println ( ficheros[i].getName() );
+						System.out.println ( ficheros[i].getPath());
 				}
 			}
 }
