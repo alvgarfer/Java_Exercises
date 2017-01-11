@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MainPersona {
 	
-	public  static int N_PERSONAS = 5;
+	public static int N_PERSONAS = 5;
 	
 	public static int pedirEdad ()
 	{

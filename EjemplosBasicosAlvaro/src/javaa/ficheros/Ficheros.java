@@ -13,9 +13,9 @@ public class Ficheros
 	 *  subdirectorios y sus respectivos archivos 
 	 *  */
 
-	/**public static void main(String[] args)
+/**	public static void main(String[] args)
 	{
-		//String carpeta_raiz = "C:/Users/Alvaro/EjemplosBasicosAlvaro/EjemplosBasicosAlvaro";
+		
 		File carpeta = new File ("C:/Users/Alvaro/EjemplosBasicosAlvaro/EjemplosBasicosAlvaro");
 		
 		File [] ficheros = carpeta.listFiles();
