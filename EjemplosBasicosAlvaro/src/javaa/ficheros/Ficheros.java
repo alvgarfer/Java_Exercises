@@ -50,7 +50,7 @@ public static void main(String[] args)
 			{
 				for (int i = 0; i < ficheros.length; i ++)
 				{
-					if ( ficheros [i].isHidden() )
+					if ( ficheros [i].isHidden() && ficheros [i].isDirectory() )
 						System.out.println ( ficheros[i].getPath());
 				}
 			}
