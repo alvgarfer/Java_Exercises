@@ -2,10 +2,10 @@ package javaa.alvaro;
 
 import java.util.Scanner;
 
-public class PersonaMayor {
+public class PersonaMayor
+{
 
-	
-	 public static final int NUMERO_PERSONAS = 3;
+	public static final int NUMERO_PERSONAS = 3;
 	
 	 	
 	public static int pedirEdad ()
@@ -21,7 +21,6 @@ public class PersonaMayor {
 	}
 	
 	
-	 		
 	public static String pedirNombre ()
 	{
 		String nombre = null;
@@ -34,7 +33,8 @@ public class PersonaMayor {
 		return nombre;
 	}
 	
-public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		
 		String nombre = null;
 		int edad = 0;
@@ -59,6 +59,6 @@ public static void main(String[] args) {
 			}
 		}	
 		System.out.println("El alumno de mayor edad es: " +personaMayor.getNombre());
-}
+	}
 }
 
