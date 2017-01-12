@@ -2,7 +2,8 @@ package javaa.alvaro;
 
 import java.util.Scanner;
 
-public class MainPersona {
+public class MainPersona 
+{
 	
 	public static int N_PERSONAS = 5;
 	
@@ -30,15 +31,15 @@ public class MainPersona {
 		return nombre;
 	}
 	
-	public static void main(String[] args) {
-		
+	public static void main(String[] args)
+	{
 		Persona persona = null;
 		String nombre_aux = null;
 		int edad_aux = 0; //aux, de variable AUXILIAR - sólo sirve para guardar un dato temporalmente
 		
 		persona = new Persona();
-		for (int i = 0; i < N_PERSONAS; i++) {
-			
+		for (int i = 0; i < N_PERSONAS; i++)
+		{
 			System.out.println("Introduzca el nombre de la persona " + i);
 			nombre_aux = pedirNombre();
 	
