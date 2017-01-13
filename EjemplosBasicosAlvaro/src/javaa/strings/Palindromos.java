@@ -11,26 +11,19 @@ public class Palindromos
 		int inicio = 0;
 		int fin = cad.length() - 1;
 		
-		Scanner scanner = null;
-		scanner = new Scanner (System.in);
+			Scanner scanner = null;
+			scanner = new Scanner (System.in);
 		
 		
 		while ( inicio < fin)
 		{
 			System.out.println("Introduzca una palabra.");
-			
-			
 		}
-		
 		
 		return es_palin;
 	}
 	
-	
-	
-	
-	
-	
+
 	public static void main(String[] args)
 	{
 		
