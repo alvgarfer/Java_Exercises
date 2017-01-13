@@ -33,12 +33,12 @@ public class CrearFichero
 		
 	public static void main(String [] args) throws IOException
 	{
-		System.out.println("Hola Wey, elige un nombre para crear un archivo.");
+		System.out.println("Hola Wey, elija un nombre para crear un archivo.");
 		
 			String carpeta_donde = null;
 			File localizacion = new File (leer_archivo());
 			
-		System.out.println("Hola Wey, elige donde guardar el archivo.");
+		System.out.println("Hola Man, elija donde guardar el archivo.");
 		
 			String nombre_carpeta = null;
 			File carpeta = new File (elegir_carpeta());
