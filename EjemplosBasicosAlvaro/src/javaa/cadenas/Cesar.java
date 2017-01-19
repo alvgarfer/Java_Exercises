@@ -3,8 +3,10 @@ package javaa.cadenas;
 
 public class Cesar {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
 		Cesar cesar = null;
+		
 			cesar = new Cesar();
 			String resultado = cesar.cifradoCesar("PAPI CHULO", 1);
 			System.out.println(resultado);
