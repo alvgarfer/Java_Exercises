@@ -71,9 +71,9 @@ public class Login
 		int elegir_opcion = 0;
 		boolean opcion_correcta = false;
 		
-			System.out.println ("Para registrarse pulse 1.");
-			System.out.println ("Para logearse pulse 2.\n");
-	
+			System.out.println (" Para registrarse pulse 1.");
+			System.out.println (" Para logearse pulse 2.\n");
+		
 		do
 		{	
 			try
@@ -85,10 +85,10 @@ public class Login
 				
 			}	catch (InputMismatchException e)
 				{
-					System.out.println ("Introduzca un numero entre 1 y 2");
+					System.out.println (" Introduzca un numero entre 1 y 2");
 				}
 				
-		}	while (!opcion_correcta);
+		}	while (!opcion_correcta );
 		
 		return elegir_opcion;
 	}
@@ -105,6 +105,7 @@ public class Login
 		String username_login = null;
 		String password_login = null;
 		Scanner texto_introducido = null;
+		int contador = 3;
 		
 			File username = new File ("Username");
 			FileReader leer_username = new FileReader(username);
@@ -120,37 +121,41 @@ public class Login
 			password_leida = brr.readLine();
 			
 			
-			System.out.println("Introduzca el nombre de usuario: ");
-				texto_introducido = new Scanner (System.in); // lee por la entrada estandar el texto introducido
+		do
+			{
+				System.out.println(" Introduzca el nombre de usuario: ");
+					texto_introducido = new Scanner (System.in); // lee por la entrada estandar el texto introducido
 
-			username_login = texto_introducido.nextLine(); // almacena el nombre de usuario en el String username_login
-
-
+				username_login = texto_introducido.nextLine(); // almacena el nombre de usuario en el String username_login
+			
 				if ( username_leido.equals(username_login) )	//compara el nombre de usuario a registrarse con el nombre introducido para logearse
 				{												//sino coincide el usuario, no entra al 2º if, y dice usuario no coincide
-					System.out.println("Usuario correcto \n");
+					System.out.println(" Usuario correcto \n");
 	
-					System.out.println("Introduzca su contraseña: ");	//si coinciden los nombres de usuario, accede al if y pide la contraseña
+					System.out.println(" Introduzca su contraseña: ");	//si coinciden los nombres de usuario, accede al if y pide la contraseña
 						texto_introducido = new Scanner(System.in);		//si la contraseña coincide entra al if sino al else y dice que no coincide
 	
 					password_login = texto_introducido.nextLine();
 					
 					if ( password_leida.equals(password_login) )
 					{
-						System.out.println("Contraseña correcta. \n");
+						System.out.println(" Contraseña correcta. \n");
 						correcto = true;
 					}	
 						else
 						{
-							System.out.println("La Contraseña no coincide. \n");
+							System.out.println(" La Contraseña no coincide.\n Intentelo de nuevo \n");
 							correcto = false;
+							contador --;
 						}
 				}	
 					else
 					{
-						System.out.println("El Usuario no coincide. \n");
+						System.out.println(" El Usuario no coincide. \n");
 						correcto = false;
+						contador --;
 					}
+			}	while ( username_leido.equals(username_login) && password_leida.equals(password_login) && contador != 0);
 			
 			return correcto; 
 	}
@@ -165,21 +170,21 @@ public class Login
 			if (opcion_elegida == 1)
 			{
 		
-				System.out.println("Introduzca el nombre de usuario deseado: ");
+				System.out.println(" Introduzca el nombre de usuario deseado: ");
 					register_name = register_Name ();
 	
-				System.out.println("Introduzca la contraseña deseada: ");
+				System.out.println(" Introduzca la contraseña deseada: ");
 					register_password = register_Password ();
 	
 				escribir_En_Fichero (register_name, register_password);
 	
-					System.out.println("Enhorabuena, el registro ha sido realizado con éxito. \n");
+					System.out.println(" Enhorabuena, el registro ha sido realizado con éxito. \n");
 			}
 				else
 				{									
 					if (login (register_name, register_password) )
 					{
-						System.out.println ("Login correcto.");
+						System.out.println (" Login correcto.");
 					}
 				}
 	}
