@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Login
@@ -65,16 +66,30 @@ public class Login
 
 			/** Método que muestra un menu con dos opciones y guarda la opcion elegida
 			 * @return elegir_opcion  */
-		public static int menu() throws IOException
+	public static int menu() throws InputMismatchException
 	{
 		int elegir_opcion = 0;
+		boolean opcion_correcta = false;
 		
-			System.out.println("Para registrarse pulse 1.");
-			System.out.println("Para logearse pulse 2.\n");
-			
+			System.out.println ("Para registrarse pulse 1.");
+			System.out.println ("Para logearse pulse 2.\n");
+	
+		do
+		{	
+			try
+			{
 				Scanner introducido = new Scanner(System.in);
 				elegir_opcion = introducido.nextInt();
 					
+				opcion_correcta = (elegir_opcion == 1 || elegir_opcion == 2);
+				
+			}	catch (InputMismatchException e)
+				{
+					System.out.println ("Introduzca un numero entre 1 y 2");
+				}
+				
+		}	while (!opcion_correcta);
+		
 		return elegir_opcion;
 	}
 
