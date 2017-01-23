@@ -22,7 +22,7 @@ public class ActualizacionSalario
 		stmt = conn.createStatement();		
 		
 		stmt.execute("UPDATE JUGADORES j SET j.SALARIO = ROUND ( j.SALARIO * 1.20 )");
-		rset = stmt.executeQuery ("SELECT j.NOMBRE, j.SALARIO from JUGADORES j where j.EQUIPO_ID = "+2);
+		rset = stmt.executeQuery ("SELECT j.NOMBRE, j.SALARIO from JUGADORES j where j.EQUIPO_ID = " + 2);
 		
 		while (rset.next() )
 		{
