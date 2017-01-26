@@ -19,7 +19,7 @@ public class LiberarRecursos
 	{
 		if (conn != null) { try { conn.close(); } catch (Exception e) { e.printStackTrace(); }}	
 	}
-
+	
 	public static void main(String[] args) throws SQLException
 	{
 		ResultSet rset = null;
@@ -41,5 +41,5 @@ public class LiberarRecursos
 			liberarConexion(conn);
 		} 
 	}
-}
+} */
 

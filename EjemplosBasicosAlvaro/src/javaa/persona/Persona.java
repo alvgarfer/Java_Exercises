@@ -1,4 +1,4 @@
-package javaa.alvaro;
+package javaa.persona;
 
 public class Persona
 {	
@@ -11,6 +11,11 @@ public class Persona
 		this.altura = altura;
 	}
 	
+	public Persona() 
+	{
+		// TODO Auto-generated constructor stub
+	}
+
 	public double getPeso()
 	{
 		return peso;
@@ -29,5 +34,20 @@ public class Persona
 	public void setAltura(double altura)
 	{
 		this.altura = altura;
+	}
+
+	public void setEdad(int edad_aux) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setNombre(String nombre_aux) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void mostarPersona() {
+		// TODO Auto-generated method stub
+		
 	}
 }

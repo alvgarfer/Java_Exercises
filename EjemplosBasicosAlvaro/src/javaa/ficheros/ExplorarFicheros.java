@@ -12,8 +12,8 @@ public class ExplorarFicheros
 		File archivo = new File ("pepe");
 		FileReader filereader = new FileReader (archivo);
 		
-		int a = file
-		int b = file
+		int file = 0;;
+		int a = 0;
 		
 		char c = (char) a; // CASTING, conversion de
 

@@ -1,4 +1,4 @@
-package javaa.alvaro;
+package javaa.persona;
 
 import java.util.Scanner;
 
