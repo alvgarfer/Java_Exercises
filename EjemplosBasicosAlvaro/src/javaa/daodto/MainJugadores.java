@@ -7,9 +7,10 @@ public class MainJugadores
 
 	public static void main(String[] args)
 	{
+		int equipo_id = 2;
 		
 		JugadoresDao jugadores = new JugadoresDao();
-		List<JugadoresDto> Listajugadores = jugadores.consultarJugadoresPorEquipos(2);
+		List<JugadoresDto> Listajugadores = jugadores.consultarJugadoresPorEquipos(equipo_id);
 				
 		for (JugadoresDto jugadoresDto : Listajugadores)
 		{
