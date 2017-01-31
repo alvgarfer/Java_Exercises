@@ -10,23 +10,12 @@ import java.util.List;
 import javaa.basedatosjava.ActBaseDatos;
 
 public class JugadoresDao
-{
-
-	interface JugadoresDAO
-	{
-	    List <JugadoresDao> findAll();
-	    List <JugadoresDao> findById();
-	    List <JugadoresDao> findByName();
-	    boolean insertJugadores (JugadoresDao jugadores);
-	    boolean updateJugadores (JugadoresDao jugadores);
-	    boolean deleteJugadores (JugadoresDao jugadores);
-	}
-	
+{	
 	Connection conn = null;
 	ResultSet rset = null;
 	Statement stat = null;
 	
-	public List <JugadoresDto> consultarJugadoresPorEquipos (int Equipo)
+	public List <JugadoresDto> consultarJugadoresPorEquipos (int Equipo_id)
 	{
 		List <JugadoresDto> lista = null;
 		lista = new ArrayList <JugadoresDto>();
@@ -37,11 +26,14 @@ public class JugadoresDao
 		conn = DriverManager.getConnection ("jdbc:oracle:thin:@localhost:1521:xe", "HR", "password");
 		
 		stat = conn.createStatement();
-		rset = stat.executeQuery("SELECT j.NOMBRE , j.SALARIO, e.NOMBRE from JUGADORES j, EQUIPO e where e.EQUIPO_ID = j.EQUIPO_ID" + 2);
+		String consulta = "SELECT j.NOMBRE from JUGADORES j where j.EQUIPO_ID =" + Equipo_id;
+		//String consulta2 = "SELECT j.NOMBRE, q.NOMBRE FROM JUGADORES j, EQUIPO q WHERE q.EQUIPO_ID = j.EQUIPO_ID AND j.EQUIPO_ID =" + Equipo_id;
+		rset = stat.executeQuery(consulta);
 	
 		while (rset.next() )
 		{
-			System.out.println (rset.getString ("nombre"));
+			System.out.println (rset.getString (1));
+		//	System.out.println (rset.getString (2));
 		}
 	}
 		catch(Exception e)
@@ -58,5 +50,3 @@ public class JugadoresDao
 	return lista;
 	}
 }
-
-	
