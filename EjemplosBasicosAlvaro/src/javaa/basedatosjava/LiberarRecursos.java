@@ -28,7 +28,7 @@ public class LiberarRecursos
 		
 		try
 		{
-			// las acciones que quieres realizar
+			System.out.println("Probando");// las acciones que quieres realizar
 		}
 		catch(Exception e) //captura las excepciones
 		{
@@ -41,5 +41,7 @@ public class LiberarRecursos
 			liberarConexion(conn);
 		} 
 	}
-} */
+	
+}
+
 
