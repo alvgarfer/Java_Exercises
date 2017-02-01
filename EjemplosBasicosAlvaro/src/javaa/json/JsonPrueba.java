@@ -17,7 +17,7 @@ public class JsonPrueba
 		
 		Persona p2 = gson.fromJson(jsonpersona, Persona.class);
 		
-		System.out.println ("\nHijos = "  + p2.getHijos());
+		System.out.println ("\nHijos = " + p2.getHijos());
 		System.out.println ("Nombre = " + p2.getNombre());
 		System.out.println ("Casado = " + p2.isCasado());		
 		System.out.println ("Parado = " + p2.isParado());
