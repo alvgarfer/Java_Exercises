@@ -58,7 +58,7 @@ public class PersonaMayor
 				personaMayor.setEdad(edad);
 			}
 		}	
-		System.out.println("El alumno de mayor edad es: " +personaMayor.getNombre());
+		System.out.println("El alumno de mayor edad es: " +personaMayor);
 	}
 }
 
