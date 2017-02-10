@@ -13,6 +13,7 @@ public class Login
 {
 			/** Método para guardar el nombre de usuario al registrarse
 			 * @return User name  */
+		@SuppressWarnings("resource")
 	public static String register_Name ()
 	{
 		String user_name = null; //	nombre de usuario, elegido por el cliente
@@ -27,6 +28,7 @@ public class Login
 	
 			/** Método para guardar la contraseña del usuario al registrarse
 			 * @return Password */
+		@SuppressWarnings("resource")
 	public static String register_Password ()
 	{
 		String user_pass = null;	//	contraseña, elegida por el cliente
@@ -78,6 +80,7 @@ public class Login
 		{	
 			try
 			{
+					@SuppressWarnings("resource")
 				Scanner introducido = new Scanner(System.in);
 				elegir_opcion = introducido.nextInt();
 					
@@ -96,6 +99,7 @@ public class Login
 			/** Método que permite al usuario logear
 			 * @return Ok si correcto o Pedir de nuevo si error 
 			 * @throws IOException */
+		@SuppressWarnings("resource")
 	public static boolean login (String register_name, String register_password) throws IOException
 	{
 		boolean correcto = false;
@@ -121,40 +125,41 @@ public class Login
 				password_leida = brr.readLine();
 			
 		do
-			{
-				System.out.println (" Introduzca el nombre de usuario: ");
-					texto_introducido = new Scanner (System.in); // lee por la entrada estandar el texto introducido
+		{
+			System.out.println (" Introduzca el nombre de usuario: ");
+			texto_introducido = new Scanner (System.in); // lee por la entrada estandar el texto introducido
 
-				username_login = texto_introducido.nextLine(); // almacena el nombre de usuario en el String username_login
+			username_login = texto_introducido.nextLine(); // almacena el nombre de usuario en el String username_login
 			
-				if ( username_leido.equals(username_login) )	//compara el nombre de usuario a registrarse con el nombre introducido para logearse
-				{												//sino coincide el usuario, no entra al 2º if, y dice usuario no coincide
-					System.out.println (" Usuario correcto \n");
+			if ( username_leido.equals(username_login) )	//compara el nombre de usuario a registrarse con el nombre introducido para logearse
+			{												//sino coincide el usuario, no entra al 2º if, y dice usuario no coincide
+				System.out.println (" Usuario correcto \n");
 	
-					System.out.println (" Introduzca su contraseña: ");	//si coinciden los nombres de usuario, accede al if y pide la contraseña
-						texto_introducido = new Scanner(System.in);		//si la contraseña coincide entra al if sino al else y dice que no coincide
+				System.out.println (" Introduzca su contraseña: ");	//si coinciden los nombres de usuario, accede al if y pide la contraseña
+					texto_introducido = new Scanner(System.in);		//si la contraseña coincide entra al if sino al else y dice que no coincide
 	
 					password_login = texto_introducido.nextLine();
 					
-					if ( password_leida.equals(password_login) )
-					{
-						System.out.println (" Contraseña correcta. \n");
-						correcto = true;
-					}	
-						else
-						{
-							System.out.println (" La Contraseña no coincide.\n Intentelo de nuevo \n");
-							correcto = false;
-							contador --;
-						}
+				if ( password_leida.equals(password_login) )
+				{
+					System.out.println (" Contraseña correcta. \n");
+					correcto = true;
 				}	
+					else
+					{
+						System.out.println (" La Contraseña no coincide.\n Intentelo de nuevo \n");
+						correcto = false;
+						contador --;
+					}
+			}	
 					else
 					{
 						System.out.println (" El Usuario no coincide. \n");
 						correcto = false;
 						contador --;
 					}
-			}	while ( !username_leido.equals(username_login) && !password_leida.equals(password_login) && contador != 0);
+			
+		}	while ( !username_leido.equals(username_login) && !password_leida.equals(password_login) && contador != 0);
 			
 			return correcto; 
 	}

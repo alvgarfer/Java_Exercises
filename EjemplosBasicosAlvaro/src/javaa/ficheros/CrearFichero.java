@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class CrearFichero
 {
 
+		@SuppressWarnings("resource")
 	public static String leer_archivo ()
 	{
 		String nombre_archivo = null;
@@ -18,6 +19,7 @@ public class CrearFichero
 		return nombre_archivo;
 	}
 	
+		@SuppressWarnings("resource")
 	public static String elegir_carpeta ()
 	{
 		String carpeta_donde = null;
@@ -30,17 +32,12 @@ public class CrearFichero
 	}
 		
 		
-		
 	public static void main(String [] args) throws IOException
 	{
 		System.out.println("Hola Wey, elija un nombre para crear un archivo.");
 		
-			String carpeta_donde = null;
-			File localizacion = new File (leer_archivo());
-			
-		System.out.println("Hola Man, elija donde guardar el archivo.");
+			System.out.println("Hola Man, elija donde guardar el archivo.");
 		
-			String nombre_carpeta = null;
 			File carpeta = new File (elegir_carpeta());
 		
 			carpeta.createNewFile();

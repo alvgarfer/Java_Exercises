@@ -21,10 +21,9 @@ public class Ejercicio
 		Connection conn = null;
 		ResultSet rset = null;
 		Statement stmt = null;
-		ArrayList<Jugador> lista_jugadores = null;
-
-	try
-	{
+		
+		try
+		{
 			//registro el driver, en realidad, hago que se ejecuten unas pocas líneas de la clase OracleDriver
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 			//DriverManager.registerDriver (new oracle.jdbc.driver.OracleDriver());// método equivalente al anterior

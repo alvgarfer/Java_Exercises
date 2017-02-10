@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.Set;
 
 public class ActualizacionSalario
 {
@@ -66,9 +65,9 @@ public class ActualizacionSalario
 	
 		finally //libero recursos, de "adentro a fuera" , ResultSet, Statment, Conexion
 		{
-			if (rset2 != null) 	{ try { rset2.close(); } catch (Exception e2) { e2.printStackTrace(); }}
-			if (stmt2 != null)	{ try {	stmt2.close(); } catch (Exception e2) { e2.printStackTrace(); }}
-			if (conn2 != null) 	{ try { conn2.close(); } catch (Exception e4) { e4.printStackTrace(); }}
+			if (rset2 != null) 	{ try { rset2.close(); } catch (Exception e) { e.printStackTrace(); }}
+			if (stmt2 != null)	{ try {	stmt2.close(); } catch (Exception e) { e.printStackTrace(); }}
+			if (conn2 != null) 	{ try { conn2.close(); } catch (Exception e) { e.printStackTrace(); }}
 		}   
 	}
 }

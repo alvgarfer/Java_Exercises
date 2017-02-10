@@ -2,8 +2,9 @@ package javaa.alvaro;
 
 import java.util.Scanner;
 
-public class MayorDe3 {
-	
+public class MayorDe3
+{
+		@SuppressWarnings("resource")
 	public static int pedirNumero ()
 	{
 		int num_leido = 0;
@@ -11,14 +12,12 @@ public class MayorDe3 {
 			
 			scanner = new Scanner(System.in); //preparo para leer de la entrada estándar (teclado)
 			num_leido = scanner.nextInt(); //leo y asigno
-			
 		
 		return num_leido;
 	}
 	
-	
-	public static void main(String[] args) {
-		
+	public static void main(String[] args)
+	{
 		int n1 = 0;
 		int n2 = 0;
 		int n3 = 0;
@@ -33,7 +32,7 @@ public class MayorDe3 {
 			System.out.println("Introduzca numero 3");
 			n3 = pedirNumero();
 			
-			if (n1>=n2) 
+			if (n1 >= n2) 
 			{
 				mayor = n1;
 			} else
@@ -41,12 +40,11 @@ public class MayorDe3 {
 				mayor = n2;
 			}
 			//hasta aquí, ya sé quién es mayor, N1 o n2. Ahora queda comparar con n3
-			if (n3>n2)
+			if (n3 > n2)
 			{
 				mayor = n3;
 			}
 			
 			System.out.println("El numero mayor es " + mayor);
 	}
-
 }

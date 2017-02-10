@@ -3,11 +3,9 @@ package javaa.alvaro;
 import java.util.Scanner;
 
 /**
- * progrma que pide una nota entera
- * hasta que sea mayor que 5 (aprobada)
- * @author Administrador
- *
- */
+ * programa que pide una nota entera
+ * hasta que sea mayor que 5 (aprobada) */
+
 public class NotaAprobada {
 	
 	private static  boolean aprobado (int n)
@@ -23,8 +21,8 @@ public class NotaAprobada {
 		 */
 		return (n>=5);
 	}
-
 	
+		@SuppressWarnings("resource")
 	public static int pedirNota ()
 	{
 		int num_leido = 0;
@@ -34,35 +32,31 @@ public class NotaAprobada {
 			scanner = new Scanner(System.in); //preparo para leer de la entrada estándar (teclado)
 			num_leido = scanner.nextInt(); //leo y asigno
 			
-		
 		return num_leido;
 	}
+		
 	private static void imprimeNotaAlfabetica (int nota_numerica)
 	{
-		switch (nota_numerica) {
+		switch (nota_numerica)
+		{
 		case 10: 
 				System.out.println("MATRÍCULA DE HONOR");
-			
 			break;
+			
 		case 9: 
 			System.out.println("SOBRE");
-		
 		break;
 		
 		case 8:
 		case 7:
 			System.out.println("NOTABLE");
-		
 		break;
 		
 		case 6:
 			System.out.println("BIEN");
 		
-		//break;
-		
 		case 5:
 			System.out.println("SUFICIENTE");
-		
 		break;
 		
 			
@@ -70,12 +64,10 @@ public class NotaAprobada {
 			System.out.println("INSUFICIENTE");
 			break;
 		}
-		
-		
 	}
 	
-	public static void main(String[] args) {
-		
+	public static void main(String[] args)
+	{
 		int nota = 0;
 		
 		do
@@ -83,7 +75,6 @@ public class NotaAprobada {
 			nota = pedirNota();
 		} while (!aprobado(nota));
 		
-		//System.out.println("APROBASTE");
 		imprimeNotaAlfabetica(nota);
 	}
 }

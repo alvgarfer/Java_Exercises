@@ -12,7 +12,8 @@ public class QueHaceJava
         a++;
     } 
  
-    public static void main(String args[])
+    	@SuppressWarnings("null")
+	public static void main(String args[])
 	{ 
         QueHaceJava qh1 = null; 	//creas la variable String qh1
         QueHaceJava qh2 = null;		//creas la variable	String qh2
@@ -24,6 +25,6 @@ public class QueHaceJava
         qh1.a = 33;			//almacena 33 en qh1
         qh1.metodo(); 				//imprime a = 33, a+1 .. 	-> a = 34
         System.out.println(qh1.a); 	// imprime el metodo qh1, que es = a 33
-        //qh2.metodo();			//ejecuta el metodo para qh2 pero vale NULL
+        qh2.metodo();			//ejecuta el metodo para qh2 pero vale NULL
     } 
 }
