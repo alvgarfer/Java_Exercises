@@ -4,5 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_121"/>
 	<classpathentry kind="lib" path="C:/My_Oracle/ojdbc6.jar"/>
 	<classpathentry kind="lib" path="C:/My_Oracle/gson-2.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/My_Oracle/mysql-connector-java-6.0.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

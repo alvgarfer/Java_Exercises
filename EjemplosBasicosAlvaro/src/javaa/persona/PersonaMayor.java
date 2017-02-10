@@ -8,6 +8,7 @@ public class PersonaMayor
 	public static final int NUMERO_PERSONAS = 3;
 	
 	 	
+		@SuppressWarnings("resource")
 	public static int pedirEdad ()
 	{
 		int num_leido = 0;
@@ -21,6 +22,7 @@ public class PersonaMayor
 	}
 	
 	
+		@SuppressWarnings("resource")
 	public static String pedirNombre ()
 	{
 		String nombre = null;
@@ -43,7 +45,7 @@ public class PersonaMayor
 		Persona personaMayor = new Persona();
 		Persona p = new Persona();
 
-		for(int i=0; i < NUMERO_PERSONAS; i++ )
+		for(int i = 0; i < NUMERO_PERSONAS; i++ )
 		{
 			System.out.print("Introduzca su nombre: ");
 			nombre = pedirNombre();

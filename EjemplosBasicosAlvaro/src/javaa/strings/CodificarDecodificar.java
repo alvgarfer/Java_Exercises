@@ -64,6 +64,7 @@ public class CodificarDecodificar
 	return mensaje_decodificado;
 	}
 
+		@SuppressWarnings("static-access")
 	public static void main (String[] args)
 	{
 

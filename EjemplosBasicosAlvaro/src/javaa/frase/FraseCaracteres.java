@@ -8,6 +8,7 @@ public class FraseCaracteres
 	 *
 	 * @return la frase introducida por el usuario
 	 */
+		@SuppressWarnings("resource")
 	public static String frase ()
 	{
 		String frase_usuario = null;

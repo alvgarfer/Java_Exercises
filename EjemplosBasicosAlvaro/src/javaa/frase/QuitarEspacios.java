@@ -17,6 +17,7 @@ public class QuitarEspacios
 		
 	}
 	
+		@SuppressWarnings("resource")
 	public static void main(String[] args)
 	{	
 			System.out.println ("Introduzca una frase: ");
