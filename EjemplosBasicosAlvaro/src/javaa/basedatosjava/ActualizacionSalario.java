@@ -32,9 +32,9 @@ public class ActualizacionSalario
 	
 		finally //libero recursos, de "adentro a fuera" , ResultSet, Statment, Conexion
 		{
-			if (rset != null) 	{ try { rset.close(); } catch (Exception e2) { e2.printStackTrace(); }}
-			if (stmt != null)	{ try {	stmt.close(); } catch (Exception e2) { e2.printStackTrace(); }}
-			if (conn != null) 	{ try { conn.close(); } catch (Exception e4) { e4.printStackTrace(); }}
+			if (rset != null) 	{ try { rset.close(); } catch (Exception e) { e.printStackTrace(); }}
+			if (stmt != null)	{ try {	stmt.close(); } catch (Exception e) { e.printStackTrace(); }}
+			if (conn != null) 	{ try { conn.close(); } catch (Exception e) { e.printStackTrace(); }}
 		}   
 	
 		// CONEXION 2, para mostar las tablas actualizadas

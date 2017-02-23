@@ -5,5 +5,6 @@
 	<classpathentry kind="lib" path="C:/My_Oracle/ojdbc6.jar"/>
 	<classpathentry kind="lib" path="C:/My_Oracle/gson-2.8.0.jar"/>
 	<classpathentry kind="lib" path="C:/My_Oracle/mysql-connector-java-6.0.5.jar"/>
+	<classpathentry kind="lib" path="C:/My_Oracle/log4j-1.2.17.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

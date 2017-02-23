@@ -1,10 +1,11 @@
 package javaa.juegosazar;
 
 import java.util.Scanner;
+import org.apache.log4j.Logger;
+
 
 public class NumeroRandom 
 {
-	
 		@SuppressWarnings("resource")
 		
 	public static int pedirNumero()
@@ -27,8 +28,34 @@ public class NumeroRandom
 		return num_aleatorio;
 	}
 	
+	private static Logger log = Logger.getLogger("mlog");
+	
+	
 	public static void main(String[] args) 
 	{
+		try
+		{
+			if (log.isTraceEnabled() )
+			{
+				log.trace("Mensaje de trace");
+			}
+			
+			if (log.isDebugEnabled() )
+			{
+				log.debug("Mensaje de debug");
+			}
+			
+			if (log.isInfoEnabled())
+			{
+				log.info("Mensaje de info");
+			}
+			
+		}	catch (Exception e)
+			{
+				log.warn("Mensaje de warn", e);
+				log.error("Mensaje de error", e);
+				log.fatal("Mensaje de fatal", e);
+			}
 		
 		int numero_random = generarAleatorio ();
 		
@@ -37,7 +64,6 @@ public class NumeroRandom
 		int intentos = 5;
 		
 		boolean acertado = false;
-		
 		
 			do
 			{
@@ -66,15 +92,3 @@ public class NumeroRandom
 			} while ((contador < 5) && (!acertado));
 	}
 }	
-		/**
-done		1 llamar metodo math y almacenar el numero aleatorio
-			
-done		2 llamar metodo PedirNumero
-		
-done		3 comparar nº introducido y nº generado
-
-done		4 si es > indicarlo		si es < indicarlo (if else)
-	
-done		5 Usar do while 5 veces. */
-		
-
